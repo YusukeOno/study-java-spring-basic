@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.slf4j.Slf4j;
 import work.y_ono.example.application.service.UserApplicationService;
+import work.y_ono.example.form.GroupOrder;
 import work.y_ono.example.form.SignupForm;
 
 @Controller
@@ -38,7 +39,9 @@ public class SignupController {
 
     // ユーザー登録処理
     @PostMapping("/signup")
-    public String postSignup(Model model, Locale locale, @ModelAttribute @Validated SignupForm form, BindingResult bindingResult) {
+    public String postSignup(Model model, Locale locale,
+        @ModelAttribute @Validated(GroupOrder.class) SignupForm form,
+        BindingResult bindingResult) {
         // 入力チェック
         if (bindingResult.hasErrors()) {
             // NG:ユーザー登録画面に戻る
