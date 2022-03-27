@@ -11,7 +11,7 @@ import work.y_ono.example.repository.UserMapper;
 
 @Service
 public class UserServiceImpl implements UserService {
-    
+
     @Autowired
     private UserMapper mapper;
 
@@ -32,5 +32,19 @@ public class UserServiceImpl implements UserService {
     @Override
     public MUser getUserOne(String userId) {
         return mapper.findOne(userId);
+    }
+
+    // ユーザー更新(1件)
+    @Override
+    public void updateUserOne(String userId,
+            String password,
+            String userName) {
+        mapper.updateOne(userId, password, userName);
+    }
+
+    // ユーザー削除(1件)
+    @Override
+    public void deleteUserOne(String userId) {
+        int count = mapper.deleteOne(userId);
     }
 }
