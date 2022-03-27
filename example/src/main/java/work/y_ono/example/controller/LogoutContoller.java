@@ -12,6 +12,6 @@ public class LogoutContoller {
     @PostMapping("/logout")
     public String postLogout() {
         log.info("ログアウト");
-        return "redicet:login";
+        return "redirect:login";
     }
 }
