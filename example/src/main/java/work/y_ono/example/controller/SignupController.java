@@ -74,7 +74,7 @@ public class SignupController {
 
     // データベース関連の例外処理
     @ExceptionHandler(DataAccessException.class)
-    public String dataAccessExceptHandler(DataAccessException e, Model model) {
+    public String dataAccessExceptionHandler(DataAccessException e, Model model) {
         // 空文字をセット
         model.addAttribute("error", "");
 
