@@ -20,7 +20,7 @@ public class LogAspect {
         log.info("メソッド開始: " + jp.getSignature());
     }
 
-    @After("execution(* *..*UserService.*(..))")
+    @After("execution(* *..*.*UserService.*(..))")
     public void endLog(JoinPoint jp) {
         log.info("メソッド終了: " + jp.getSignature());
     }
