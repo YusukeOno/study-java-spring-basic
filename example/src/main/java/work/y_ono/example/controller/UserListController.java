@@ -17,7 +17,7 @@ import work.y_ono.example.form.UserListForm;
 
 @Controller
 @RequestMapping("/user")
-public class UserListContoller {
+public class UserListController {
 
     @Autowired
     private UserService userService;
