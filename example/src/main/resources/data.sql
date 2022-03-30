@@ -12,9 +12,9 @@ INSERT INTO m_user (
 ,   role
 ) VALUES 
 (
-    'system@co.jp', 'password', 'システム管理者', '2000-01-01', 21, 1, 1, 'ROLE_ADMIN'
+    'system@co.jp', '$2a$10$Ns7n97y1L7I3FZy.XWeCZ.cichyjbzS8TtsSJtyMxPF.KlvAzH//y', 'システム管理者', '2000-01-01', 21, 1, 1, 'ROLE_ADMIN'
 ),(
-    'user@co.jp', 'password', 'ユーザー1', '2000-01-01', 21, 2, 2, 'ROLE_GENERAL'
+    'user@co.jp', '$2a$10$Ns7n97y1L7I3FZy.XWeCZ.cichyjbzS8TtsSJtyMxPF.KlvAzH//y', 'ユーザー1', '2000-01-01', 21, 2, 2, 'ROLE_GENERAL'
 )
 ;
 
